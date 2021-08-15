@@ -12,7 +12,8 @@ class Product < ApplicationRecord
   def count_purchase_product
     rs = purchase_products.from_store('PurchaseStoreRS').sum('Quantity')
     sp = purchase_products.from_store('PurchaseStoreSP').sum('Quantity')
-    "RS: #{rs}  SP: #{sp}"
+    #"RS: #{rs}  SP: #{sp}"
+    purchase_products.sum('Quantity')
   end
 
   def count_month_purchase_product(year, month)
@@ -38,7 +39,8 @@ class Product < ApplicationRecord
   def count_sale_product
     rs ||= sale_products.from_sale_store('PurchaseStoreRS').sum('Quantity')
     sp ||= sale_products.from_sale_store('PurchaseStoreSP').sum('Quantity')
-    "RS: #{rs}  SP: #{sp}"
+    #"RS: #{rs}  SP: #{sp}"
+    sale_products.sum('Quantity')
   end
 
   def sum_simplo_items
