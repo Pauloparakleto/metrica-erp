@@ -25,7 +25,7 @@
         <div class="navbar-bg"></div>
         <%= render 'shared/navbar' %>
         <%= render 'shared/sidebar' %>
-        <div class="main-content">
+        <div class="main-content mb-2">
           <%= content_for?(:content) ? yield(:content) : yield %>
         </div>
         <%= render 'shared/footer' %>
