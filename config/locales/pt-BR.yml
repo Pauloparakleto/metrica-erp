@@ -175,6 +175,11 @@ pt-BR:
         one: 'Não foi possível gravar %{model}: 1 erro'
         other: 'Não foi possível gravar %{model}: %{count} erros'
   helpers:
+    labels:
+      company_name: Nome da Empresa
+      first_name: Primeiro nome do dono
+      last_name: Sobrenome do dono
+      cellphone: Celular
     select:
       prompt: Por favor selecione
     submit:
