@@ -3,6 +3,7 @@ require 'rqrcode_png'
 class Product < ApplicationRecord
   acts_as_tenant :account
   belongs_to :category
+  belongs_to :team, optional: true
   has_many :purchase_products
   has_many :sale_products
   has_many :group_products
