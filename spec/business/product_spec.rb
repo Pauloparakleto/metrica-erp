@@ -14,7 +14,7 @@ RSpec.describe ProductStock do
     FactoryBot.create_list(:sale_product, 3, product: product, quantity: 100)
     expect(product).to be_truthy
     expect(product.count_sale_product).to eq(300)
-    end
+  end
 
   xit 'should sum total purchase' do
     # TODO, define purchase_product on Bot.
